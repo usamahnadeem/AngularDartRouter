@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:angular/angular.dart';
 import 'package:angular_components/angular_components.dart';
 import 'package:angular_router/angular_router.dart';
+import '../services/cookie_service.dart';
 
 
 
@@ -19,11 +20,14 @@ import 'package:angular_router/angular_router.dart';
     NgFor,
     NgIf,
   ],
-//  providers: [const ClassProvider(TodoListService)],
+  providers: [
+    CookieService
+  ],
 )
 class LoginComponent implements OnInit {
 
   final Router _router;
+  final CookieService _cookieService;
 
   LoginComponent(this._router);
 

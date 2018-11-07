@@ -6,7 +6,7 @@ import 'package:cooky/cooky.dart' as cookie;
 import 'package:goodRouting/configuration.dart';
 
 @Injectable()
-class TestService {
+class CookieService {
   String serviceURL = "$backendUrl/api/user";
   String logoutURL = "$backendUrl/logout";
 
