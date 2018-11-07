@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:angular/angular.dart';
 import 'package:angular_components/angular_components.dart';
+import 'package:angular_router/angular_router.dart';
+
 
 
 
@@ -13,6 +15,7 @@ import 'package:angular_components/angular_components.dart';
     MaterialFabComponent,
     MaterialIconComponent,
     materialInputDirectives,
+    MaterialButtonComponent,
     NgFor,
     NgIf,
   ],
@@ -20,9 +23,17 @@ import 'package:angular_components/angular_components.dart';
 )
 class LoginComponent implements OnInit {
 
+  final Router _router;
 
-  List<String> items = [];
-  String newTodo = '';
+  LoginComponent(this._router);
+
+  String username;
+  String password;
+
+  goToHome() {
+    _router.navigate("home");
+  }
+
 
   @override
   Future<Null> ngOnInit() async {
@@ -32,6 +43,4 @@ class LoginComponent implements OnInit {
   void add() {
 
   }
-
-  String remove(int index) => items.removeAt(index);
 }

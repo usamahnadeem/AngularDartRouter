@@ -1,1 +1,9 @@
-<h1>Login Component</h1>
+<h2>Login Component</h2>
+<material-input label="Username" type="text" [(ngModel)]="username"></material-input>
+<material-input label="Password" type="password" [(ngModel)]="password"></material-input>
+
+<h4>Hi, {{username}}</h4>
+<br>
+<material-button raised (trigger)="goToHome()">
+    Go
+</material-button>

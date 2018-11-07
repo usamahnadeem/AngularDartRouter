@@ -1,11 +1,10 @@
-<h1>Angular Router</h1>
-<nav>
-    <a [routerLink]="RoutePaths.login.toUrl()"
+<div class="navigation">
+    <material-fab [routerLink]="RoutePaths.login.toUrl()"
        [routerLinkActive]="'active'">Login
-    </a>
-    <a [routerLink]="RoutePaths.home.toUrl()"
+    </material-fab>
+    <material-fab [routerLink]="RoutePaths.home.toUrl()"
        [routerLinkActive]="'active'">Home
-    </a>
-</nav>
+    </material-fab>
+</div>
 <router-outlet [routes]="Routes.all"></router-outlet>
 

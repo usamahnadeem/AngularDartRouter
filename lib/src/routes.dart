@@ -5,6 +5,7 @@ import './login/login_component.template.dart' as login_template;
 export 'route_paths.dart';
 
 class Routes {
+
   static final home = RouteDefinition(
     routePath: RoutePaths.home,
     component: home_template.HomeComponentNgFactory,
@@ -17,6 +18,10 @@ class Routes {
 
   static final all = <RouteDefinition>[
     home,
-    login
+    login,
+    RouteDefinition.redirect(
+      path: '',
+      redirectTo: RoutePaths.login.toUrl(),
+    ),
   ];
 }
