@@ -29,14 +29,16 @@ class LoginComponent implements OnInit {
   final Router _router;
   final CookieService _cookieService;
 
-  LoginComponent(this._router);
+  LoginComponent(this._router, this._cookieService);
 
   String username;
   String password;
 
-  goToHome() {
-    _router.navigate("home");
+  login(){
+    _cookieService.login(username, password);
   }
+
+
 
 
   @override
