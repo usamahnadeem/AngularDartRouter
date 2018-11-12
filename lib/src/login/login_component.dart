@@ -11,6 +11,7 @@ import '../services/cookie_service.dart';
 @Component(
   selector: 'login',
   templateUrl: './login_component.html',
+  styleUrls: ['login_component.css'],
   directives: [
     MaterialCheckboxComponent,
     MaterialFabComponent,
@@ -35,7 +36,8 @@ class LoginComponent implements OnInit {
   String password;
 
   login(){
-    _cookieService.login(username, password);
+    // _cookieService.login(username, password);
+    _router.navigate("/home");
   }
 
 

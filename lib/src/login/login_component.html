@@ -1,12 +1,15 @@
 <h2>Login Component</h2>
+<h4 style="padding-right: 50%">Hi, {{username}}</h4>
 <material-input label="Username"
                 leadingGlyph="person"
                 [(ngModel)]="username"></material-input>
+<br>
 <material-input label="Password"
                 leadingGlyph="lock"
                 [(ngModel)]="password"
                 type="password"
                 (keyup.enter)="login()"></material-input>
-<material-button  class="blue"(trigger)="login()">Sign In</material-button>
+                <br>
+<material-button  class="signin" (trigger)="login()">Sign In to Home</material-button>
 
-<h4>Hi, {{username}}</h4>
+
